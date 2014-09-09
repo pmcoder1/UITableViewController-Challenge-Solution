@@ -84,8 +84,7 @@
     }
     else if (indexPath.section == 2)
     {
-        //Section 3\'s cells should display the word cell and the current row number. Use a format string and pass in NSIndexPath’s property row.
-        cell.textLabel.text = [NSString stringWithFormat:@"Cell %i",indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"Cell %li",indexPath.row];
     }
     
  
