@@ -71,24 +71,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *cellString = @"";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"
+ forIndexPath:indexPath];
+   
     if(indexPath.section == 0)
     {
-        cellString = @"I am in section 0";
+        cell.textLabel.text = @"I am in section 0";
     }
     else if (indexPath.section == 1)
     {
-        cellString = @"another section";
+        cell.textLabel.text = @"another section";
     }
     else if (indexPath.section == 2)
     {
         //Section 3\'s cells should display the word cell and the current row number. Use a format string and pass in NSIndexPath’s property row.
-        NSString *str = [NSString stringWithFormat:@"cell %i",indexPath.row];
-        cellString = str;
+        cell.textLabel.text = [NSString stringWithFormat:@"Cell %i",indexPath.row];
     }
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"
- forIndexPath:indexPath];
-    cell.textLabel.text = cellString;
+    
+ 
     
     // Configure the cell...
     
