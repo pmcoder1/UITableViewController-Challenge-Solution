@@ -1,5 +1,5 @@
 //
-//  RDDViewController.h
+//  TableViewController.h
 //  UITableViewController Challenge Solution
 //
 //  Created by Ron Duran on 9/8/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RDDViewController : UIViewController
+@interface TableViewController : UITableViewController
 
 @end
